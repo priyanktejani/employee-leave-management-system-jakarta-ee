@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="HolidayBookingDAO">
+		<jta-data-source>java:/HolidayBookingDB</jta-data-source>
+		<class>model.User</class>
+		<class>model.EmployeeEntitlement</class>
+		<class>model.LeaveApplication</class>
+		<class>model.Department</class>
+		<class>model.DepartmentCategory</class>
+		<class>model.Role</class>
+		<class>model.RoleCategory</class>
+		<class>model.RequestLog</class>
+		<properties>
+			<property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect"/>
+		</properties>
+	</persistence-unit>
+</persistence>
